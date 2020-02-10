@@ -11,7 +11,7 @@ function same([x, y], [j, k]) {
 
 // The game state to search for `cell` is passed as the `this` value of the function.
 function contains(cell) {
-  if (cell.x == this.contains().x && cell.y == this.contains().y) {
+  if(this.some((c) => same(c, cell))) {
     return true
   } else {
     return false
